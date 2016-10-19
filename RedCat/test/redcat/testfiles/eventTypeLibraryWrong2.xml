@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventTypeList>
+
+    <eventType>
+        <id>10</id>
+        <matchString>match1</matchString>
+        <classification>class1</classification>
+        <priority>1</priority>
+        <description>descr1</description>
+    </eventType>
+
+
+  
+</eventTypeList>

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+
+<algorithm xmlns="http://www.w3schools.com"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com algorithm_schema.xsd">
+
+	<iterations>1024</iterations>
+
+	<construction>
+		<insertion name="bestInsertion">
+			<considerFixedCosts weight="1.0">true</considerFixedCosts>
+		</insertion>
+	</construction>
+
+	<strategy>
+		<memory>1</memory>
+		<searchStrategies>
+
+			<searchStrategy name="selectRandom_radialRuin">
+				<selector name="selectRandomly"/>
+	  			<acceptor name="acceptNewRemoveWorst"/>
+				<modules>
+					<module name="ruin_and_recreate">
+						<ruin name="radialRuin">
+							<share>0.3</share>
+						</ruin>
+						<insertion name="bestInsertion"/>
+					</module>
+				</modules>
+				<probability>0.8</probability>
+			</searchStrategy>
+
+			<searchStrategy name="selectRandom_randomRuin">
+				<selector name="selectRandomly"/>
+				<acceptor name="acceptNewRemoveWorst"/>
+				<modules>
+					<module name="ruin_and_recreate">
+						<ruin name="randomRuin">
+							<share>0.25</share>
+						</ruin>
+						<insertion name="bestInsertion"/>
+					</module>
+				</modules>
+				<probability>0.1</probability>
+			</searchStrategy>
+
+                        <searchStrategy name="selectBest_randomRuin">
+				<selector name="selectBest"/>
+				<acceptor name="acceptNewRemoveWorst"/>
+				<modules>
+					<module name="ruin_and_recreate">
+						<ruin name="randomRuin">
+							<share>0.3</share>
+						</ruin>
+						<insertion name="bestInsertion"/>
+					</module>
+				</modules>
+				<probability>0.1</probability>
+			</searchStrategy>
+		</searchStrategies>
+	</strategy>
+
+
+</algorithm>

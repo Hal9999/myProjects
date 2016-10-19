@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventTypeList>
+
+	<eventType>
+		<id>1</id>
+		<matchString>Aborted_clients</matchString>
+		<niceString>Client abortiti</niceString>
+		<classification>Fault</classification>
+		<priority>1</priority>
+		<description>Numero di connessioni fallite perché il client ha chiuso senza prima disconnettersi</description>
+	</eventType>
+  
+	<eventType>
+		<id>2</id>
+		<matchString>Aborted_connects</matchString>
+		<niceString>Connessioni abortite</niceString>
+		<classification>Fault</classification>
+		<priority>1</priority>
+		<description>Il numero di tentativi falliti per la connessione al server MySQL</description>
+	</eventType>
+  
+	<eventType>
+		<id>3</id>
+		<matchString>Bytes_received</matchString>
+		<niceString>Byte ricevuti</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di byte ricevuti(in byte)</description>
+	</eventType>
+  
+  <eventType>
+		<id>4</id>
+		<matchString>Innodb_row_lock_time</matchString>
+		<niceString>Tempo acquisiz. righe bloccate</niceString>
+		<classification>Performance</classification>
+		<priority>2</priority>
+		<description>Tempo totale impiegato nell’acquisizione di tutte le righe bloccate(in millisec.)</description>
+	</eventType>
+  
+  <eventType>
+		<id>5</id>
+		<matchString>Innodb_row_lock_time_avg</matchString>
+		<niceString>Tempo medio acquisiz. riga bloccata</niceString>
+		<classification>Performance</classification>
+		<priority>2</priority>
+		<description>Tempo medio impiegato nell’acquisizione di una riga bloccata(in millisec.)</description>
+	</eventType>
+  
+  <eventType>
+		<id>6</id>
+		<matchString>Bytes_sent</matchString>
+		<niceString>Byte inviati</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di byte inviati(in byte)</description>
+	</eventType>
+  
+  <eventType>
+		<id>7</id>
+		<matchString>Innodb_row_lock_time_max</matchString>
+		<niceString>Tempo max acquisiz. riga bloccata</niceString>
+		<classification>Performance</classification>
+		<priority>2</priority>
+		<description>Tempo max impiegato nell’acquisizione di una riga bloccata(in millisec.)</description>
+	</eventType>
+  
+  <eventType>
+		<id>8</id>
+		<matchString>Last_query_cost</matchString>
+		<niceString>Tempo ultima query compilata</niceString>
+		<classification>Performance</classification>
+		<priority>2</priority>
+		<description>Costo totale dell’ultima query compilata, calcolato dal Query Optimizer(in sec.)</description>
+	</eventType>
+  
+  <eventType>
+		<id>9</id>
+		<matchString>Innodb_log_waits</matchString>
+		<niceString>Num attese buffer di log</niceString>
+		<classification>Fault</classification>
+		<priority>1</priority>
+		<description>Numero di volte in cui il buffer per i log è risultato insufficiente ed è stato necessario attendere</description>
+	</eventType>
+  
+  <eventType>
+		<id>10</id>
+		<matchString>Qcache_lowmem_prunes</matchString>
+		<niceString>Num query cancellate</niceString>
+		<classification>Fault</classification>
+		<priority>1</priority>
+		<description>Numero di query che sono state cancellate dalla query cache a causa della memoria insufficiente</description>
+	</eventType>
+
+
+  <eventType>
+		<id>11</id>
+		<matchString>Connections</matchString>
+		<niceString>Connessioni</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di tentativi di connessione (avvenute con successo o no) al server MySQL</description>
+	</eventType>
+  
+  <eventType>
+		<id>12</id>
+		<matchString>Innodb_data_reads</matchString>
+		<niceString>Tot dati letti</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero totale di dati letti</description>
+	</eventType>
+  
+    <eventType>
+		<id>13</id>
+		<matchString>Innodb_data_writes</matchString>
+		<niceString>Tot dati scritti</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero totale di dati scritti</description>
+	</eventType>
+  
+    <eventType>
+		<id>14</id>
+		<matchString>Max_used_connections</matchString>
+		<niceString>Max connessioni simultanee</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero massimo di connessioni simultanee verificatesi da quando il server è attivo</description>
+	</eventType>
+  
+  <eventType>
+		<id>15</id>
+		<matchString>Qcache_free_blocks</matchString>
+		<niceString>Num blocchi memoria liberi nella Qcache</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di blocchi di memoria liberi nella query cache</description>
+	</eventType>
+  
+  <eventType>
+		<id>16</id>
+		<matchString>Threads_connected</matchString>
+		<niceString>Num connessioni aperte</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di connessioni aperte correntemente</description>
+	</eventType>
+  
+  <eventType>
+		<id>17</id>
+		<matchString>Threads_running</matchString>
+		<niceString>Num threads in running</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di threads che non si trovano in spleeping</description>
+	</eventType>
+  
+  <eventType>
+		<id>18</id>
+		<matchString>Uptime</matchString>
+		<niceString>Tempo trascorso da attivazione server</niceString>
+		<classification>Monitoring</classification>
+		<priority>3</priority>
+		<description>Numero di secondi trascorsi da quando il server è attivo</description>
+	</eventType>
+  
+  </eventTypeList>

@@ -1,0 +1,27 @@
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\bin\Debug\VisulPoker.exe
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\bin\Debug\VisulPoker.pdb
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.exe
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.exe
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.exe
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.exe
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.exe
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.exe.manifest
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.application
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.exe.manifest
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.application
+C:\Users\Stefano\Desktop\Dropbox\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.exe
+C:\Users\Stefano\Desktop\Dropbox\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.ConfiguraGioco.resources
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.Properties.Resources.resources
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Debug\VisulPoker.exe.config
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Debug\VisulPoker.TrustInfo.xml

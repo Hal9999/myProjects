@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<sensor>
+                <id>4444</id>
+		<address>localhost</address>
+		<port>3306</port>
+		<user>root</user>
+		<password></password>
+		<samplingperiod>500</samplingperiod>
+	</sensor>
+	<manager>
+		<address>localhost</address>
+		<TCPport>3000</TCPport>
+		<UDPport>3001</UDPport>
+	</manager>
+</config>

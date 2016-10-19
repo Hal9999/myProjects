@@ -1,0 +1,36 @@
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\bin\Release\VisulPoker.pdb
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Release\ResolveAssemblyReference.cache
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe
+c:\users\salvo\documents\visual studio 2010\Projects\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.pdb
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.pdb
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe.manifest
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.application
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.pdb
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.ConfiguraGioco.resources
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.Properties.Resources.resources
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe.manifest
+C:\Users\TuriU2\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.application
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.pdb
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.ConfiguraGioco.resources
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.Properties.Resources.resources
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe.config
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe.manifest
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\bin\Release\VisulPoker.application
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.TrustInfo.xml
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe.manifest
+C:\Users\Salvo\Documents\My Dropbox\Visual Studio Project\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.application
+C:\Users\Stefano\Desktop\Dropbox\VisulPoker\VisulPoker\bin\Release\VisulPoker.exe.config
+C:\Users\Stefano\Desktop\Dropbox\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.exe
+C:\Users\Stefano\Desktop\Dropbox\VisulPoker\VisulPoker\obj\x86\Release\VisulPoker.pdb

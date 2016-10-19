@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE workflows SYSTEM "wfInfo.dtd">
+<workflows>
+  <workflow>
+    <name>PrepaidSale</name>
+    <simpleAction autoInstance="yes">
+      <name>InvoiceIssuance</name>
+      <role>Accountingman</role>
+      <nextAction>PaymentReception</nextAction>
+    </simpleAction>
+    <simpleAction autoInstance="no">
+      <name>GoodsDelivery</name>
+      <role>Warehouseman</role>
+    </simpleAction>
+    <simpleAction autoInstance="no">
+      <name>PaymentReception</name>
+      <role>Accountingman</role>
+      <nextAction>GoodsDelivery</nextAction>
+    </simpleAction>
+  </workflow>
+  <workflow>
+    <name>NormalSale</name>
+    <simpleAction autoInstance="yes">
+      <name>InvoiceIssuance</name>
+      <role>Accountingman</role>
+      <nextAction>PaymentReception</nextAction>
+    </simpleAction>
+    <simpleAction autoInstance="no">
+      <name>PaymentReception</name>
+      <role>Accountingman</role>
+    </simpleAction>
+    <simpleAction autoInstance="yes">
+      <name>GoodsDelivery</name>
+      <role>Warehouseman</role>
+    </simpleAction>
+  </workflow>
+  <workflow>
+    <name>SaleManagement</name>
+    <simpleAction autoInstance="yes">
+      <name>AcceptOrder</name>
+      <role>Salesman</role>
+      <nextAction>PrepaidSale</nextAction>
+      <nextAction>NormalSale</nextAction>
+    </simpleAction>
+    <processAction autoInstance="no">
+      <workflowName>PrepaidSale</workflowName>
+      <role>SalesManager</role>
+    </processAction>
+    <processAction autoInstance="no">
+      <workflowName>NormalSale</workflowName>
+      <role>SalesManager</role>
+    </processAction>
+  </workflow>
+  <workflow>
+    <name>ArticleProduction</name>
+    <simpleAction autoInstance="no">
+      <name>Publication</name>
+      <role>Editor</role>
+    </simpleAction>
+    <simpleAction autoInstance="no">
+      <name>Revising</name>
+      <role>Journalist</role>
+      <nextAction>Checking</nextAction>
+    </simpleAction>
+    <simpleAction autoInstance="no">
+      <name>Checking</name>
+      <role>Editor</role>
+      <nextAction>Revising</nextAction>
+      <nextAction>Publication</nextAction>
+    </simpleAction>
+    <simpleAction autoInstance="yes">
+      <name>Writing</name>
+      <role>Journalist</role>
+      <nextAction>Checking</nextAction>
+    </simpleAction>
+  </workflow>
+  <process>
+    <workflowName>SaleManagement</workflowName>
+    <startDate>11/10/2015 06:15:40 CEST</startDate>
+    <actionStatus taken="no" terminated="no">
+      <name>AcceptOrder</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>19/10/2015 10:37:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>InvoiceIssuance</name>
+      <actor>Andrew Elkan</actor>
+      <endDate>20/10/2015 12:47:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>PaymentReception</name>
+      <actor>Franca Chemin</actor>
+      <endDate>20/10/2015 20:53:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>GoodsDelivery</name>
+      <actor>Alessia Green</actor>
+      <endDate>22/10/2015 05:56:40 CEST</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>02/11/2015 12:05:40 CET</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>InvoiceIssuance</name>
+      <actor>Franca Chemin</actor>
+      <endDate>03/11/2015 12:00:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>PaymentReception</name>
+      <actor>Franca Chemin</actor>
+      <endDate>04/11/2015 16:13:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>GoodsDelivery</name>
+      <actor>Paola Fireman</actor>
+      <endDate>06/11/2015 03:05:40 CET</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>NormalSale</workflowName>
+    <startDate>05/10/2015 16:49:40 CEST</startDate>
+    <actionStatus taken="no" terminated="no">
+      <name>GoodsDelivery</name>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="no">
+      <name>InvoiceIssuance</name>
+      <actor>Andrew Elkan</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>10/10/2015 10:48:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Beppe Minzoni</actor>
+      <endDate>10/10/2015 15:42:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>11/10/2015 20:35:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Revising</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>12/10/2015 22:22:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>13/10/2015 23:50:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="no" terminated="no">
+      <name>Revising</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>22/10/2015 09:22:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>22/10/2015 16:36:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>24/10/2015 12:54:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Revising</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>26/10/2015 10:07:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="no" terminated="no">
+      <name>Checking</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>SaleManagement</workflowName>
+    <startDate>29/10/2015 18:00:40 CET</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>AcceptOrder</name>
+      <actor>Nanni Pascal</actor>
+      <endDate>29/10/2015 22:58:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="no" terminated="no">
+      <name>NormalSale</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>NormalSale</workflowName>
+    <startDate>30/10/2015 02:03:40 CET</startDate>
+    <actionStatus taken="no" terminated="no">
+      <name>GoodsDelivery</name>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="no">
+      <name>InvoiceIssuance</name>
+      <actor>Franco Orafi</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>26/10/2015 02:30:40 CET</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>27/10/2015 00:23:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Checking</name>
+      <endDate>28/10/2015 23:07:40 CET</endDate>
+    </actionStatus>
+    <actionStatus taken="no" terminated="no">
+      <name>Revising</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>07/10/2015 02:50:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>07/10/2015 20:42:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="no">
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>17/10/2015 08:40:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>InvoiceIssuance</name>
+      <actor>Franco Orafi</actor>
+      <endDate>18/10/2015 03:27:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>PaymentReception</name>
+      <actor>Franco Orafi</actor>
+      <endDate>19/10/2015 13:25:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="yes">
+      <name>GoodsDelivery</name>
+      <actor>Paola Fireman</actor>
+      <endDate>21/10/2015 08:30:40 CEST</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>13/10/2015 16:38:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Beppe Minzoni</actor>
+      <endDate>15/10/2015 02:47:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="yes" terminated="no">
+      <name>Checking</name>
+      <actor>Diana Eijk</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>18/10/2015 10:49:40 CEST</startDate>
+    <actionStatus taken="yes" terminated="yes">
+      <name>Writing</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>18/10/2015 12:24:40 CEST</endDate>
+    </actionStatus>
+    <actionStatus taken="no" terminated="no">
+      <name>Checking</name>
+    </actionStatus>
+  </process>
+</workflows>

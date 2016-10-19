@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wkf="http://www.pd2.org/schemas/wfInfo" targetNamespace="http://www.pd2.org/schemas/wfInfo">
+	
+	<element name="workflows">
+		<complexType>
+			<sequence>
+				<element name="workflow" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="name" type="wkf:WorkflowNameType"/>
+							<element name="action" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+									<sequence>
+										<element name="name" type="wkf:ActionNameType"/>
+										<element name="role" type="wkf:RoleNameType"/>
+										<choice>
+											<element name="nextAction" minOccurs="0" maxOccurs="unbounded" type="wkf:ActionNameType"/>
+											<element name="nextProcessAction" minOccurs="1" maxOccurs="1" type="wkf:WorkflowNameType"/>
+										</choice>
+<!-- 										possiamo obbligare il nome ella actiona ad essere uguale al nome della nextprocess action -->
+									</sequence>
+									<attribute name="autoInstanced" type="boolean" default="false"/>
+								</complexType>
+								<unique name="UniquePossibleNextAction">
+									<selector xpath="nextAction"/>
+									<field xpath="."/>
+								</unique>
+							</element>
+						</sequence>
+					</complexType>
+					<key name="KeyNextAction">
+						<selector xpath="action"/>
+						<field xpath="name"/>
+					</key>
+					<keyref name="NextActionInActionName" refer="wkf:KeyNextAction">
+						<selector xpath="action/nextAction"/>
+						<field xpath="."/>
+					</keyref>
+				</element>
+				<element name="process" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="workflowName" type="wkf:WorkflowNameType"/>
+							<element name="startDate" type="dateTime"/>
+							<element name="actionStatus" minOccurs="1" maxOccurs="unbounded">
+								<complexType>
+									<sequence>
+										<element name="name" type="wkf:ActionNameType"/>
+										<element name="actor" type="wkf:ActorNameType" minOccurs="0" maxOccurs="1"/>
+										<element name="endDate" type="dateTime" minOccurs="0" maxOccurs="1"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+					<unique name="UniqueActionStatus">
+						<selector xpath="actionStatus"/>
+						<field xpath="name"/>
+						<field xpath="actor"/>
+						<field xpath="endDate"/>
+					</unique>
+				</element>
+			</sequence>
+		</complexType>
+		<key name="KeyWorkflowName">
+			<selector xpath="workflow"/>
+			<field xpath="name"/>
+		</key>
+		<keyref name="WorkflowNameInProcessAction" refer="wkf:KeyWorkflowName">
+			<selector xpath="workflow/action"/>
+			<field xpath="nextProcessAction"/>
+		</keyref>
+		<keyref name="WorkflowNameInProcess" refer="wkf:KeyWorkflowName">
+			<selector xpath="process"/>
+			<field xpath="workflowName"/>
+		</keyref>
+	</element>
+	
+	<simpleType name="WorkflowNameType">
+		<restriction base="string">
+			<pattern value="[a-zA-Z0-9]+"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="ActionNameType">
+		<restriction base="string">
+			<pattern value="[a-zA-Z0-9]+"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="ActorNameType">
+		<restriction base="string">
+			<pattern value="[A-Z][ 'a-zA-Z]*"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="RoleNameType">
+		<restriction base="string">
+			<pattern value="[a-zA-Z0-9]+"/>
+		</restriction>
+	</simpleType>
+</schema>

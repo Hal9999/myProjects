@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wfInfo SYSTEM "wfInfo.dtd">
+<workflows>
+  <workflow>
+  	<name>NormalSale</name>
+    <simpleAction autoInstance="yes">
+    	<name>GoodsDelivery</name>
+    	<role>Warehouseman</role>
+   	</simpleAction>
+ 	<simpleAction autoInstance="yes">
+    	<name>InvoiceIssuance</name>
+    	<role>Accountingman</role>
+    	<nextAction>PaymentRec</nextAction>
+   	</simpleAction>
+ 	<simpleAction autoInstance="yes">
+    	<name>PaymentRec</name>
+    	<role>Accountingman</role>
+   	</simpleAction>
+  </workflow>
+  <workflow>
+  	<name>PrepaidSale</name>
+    <simpleAction autoInstance="yes">
+    	<name>Invoiceissuance</name>
+    	<role>Accountingman</role>
+    	<nextAction>PaymentRec</nextAction>
+   	</simpleAction>
+   	<simpleAction autoInstance="no">
+    	<name>PaymentRec</name>
+    	<role>Accountingman</role>
+    	<nextAction>GoodsDelivery</nextAction>
+   	</simpleAction>
+ 	<simpleAction autoInstance="no">
+    	<name>GoodsDelivery</name>
+    	<role>Warehouseman</role>
+   	</simpleAction>
+  </workflow>
+  <workflow>
+  	<name>SaleManagement</name>
+    <simpleAction autoInstance="yes">
+    	<name>Acceptorder</name>
+    	<role>Salesman</role>
+    	<nextAction>Prepaidsale</nextAction>
+    	<nextAction>NormalSale</nextAction>
+   	</simpleAction>
+   	<processAction autoInstance="no">
+    	<workflowName>NormalSale</workflowName>
+    	<role>SalesManager</role>
+   	</processAction>
+ 	<processAction autoInstance="no">
+    	<workflowName>PrepaidSale</workflowName>
+    	<role>SalesManager</role>
+   	</processAction>
+  </workflow>
+  <process>
+  	<workflowName>NormalSale</workflowName>
+  	<startDate>23:01 14/03/1987 CET</startDate>
+	   	<actionStatus taken="yes" terminated="yes">
+  			<name>GoodsDelivery</name>
+	   		<actor>Stefano</actor>
+	   		<endDate>23:01 14/03/1987 CET</endDate>
+	   	</actionStatus>
+  </process>
+</workflows>

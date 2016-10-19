@@ -1,0 +1,6 @@
+redcat.client
+redcat.common
+redcat.common.event
+redcat.manager
+redcat.sensor
+redcat.ui

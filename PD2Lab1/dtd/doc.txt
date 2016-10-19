@@ -1,0 +1,1 @@
+TODO : Write a short documentation of your design choices about the DTD (max 1 page) and save it as an ASCII file in [root]/dtd/doc.txt.

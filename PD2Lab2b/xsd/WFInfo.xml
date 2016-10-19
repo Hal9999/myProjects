@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wkf:workflows
+	xmlns:wkf="http://www.pd2.org/schemas/wfInfo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.pd2.org/schemas/wfInfo WFInfo.xsd">
+  <workflow>
+  	<name>NormalSale</name>
+    <action autoInstanced="true">
+    	<name>GoodsDelivery</name>
+    	<role>Warehouseman</role>
+   	</action>
+ 	<action autoInstanced="true">
+    	<name>InvoiceIssuance</name>
+    	<role>Accountingman</role>
+    	<nextAction>PaymentRec</nextAction>
+   	</action>
+ 	<action autoInstanced="true">
+    	<name>PaymentRec</name>
+    	<role>Accountingman</role>
+   	</action>
+  </workflow>
+  <workflow>
+  	<name>PrepaidSale</name>
+    <action autoInstanced="true">
+    	<name>Invoiceissuance</name>
+    	<role>Accountingman</role>
+    	<nextAction>PaymentRec</nextAction>
+   	</action>
+   	<action autoInstanced="false">
+    	<name>PaymentRec</name>
+    	<role>Accountingman</role>
+    	<nextAction>GoodsDelivery</nextAction>
+   	</action>
+ 	<action autoInstanced="false">
+    	<name>GoodsDelivery</name>
+    	<role>Warehouseman</role>
+   	</action>
+  </workflow>
+  <workflow>
+  	<name>SaleManagement</name>
+    <action autoInstanced="true">
+    	<name>Acceptorder</name>
+    	<role>Salesman</role>
+    	<nextAction>NormalSale</nextAction>
+    	<nextAction>PrepaidSale</nextAction>
+   	</action>
+   	<action autoInstanced="false">
+    	<name>NormalSale</name>
+    	<role>SalesManager</role>
+    	<nextProcessAction>NormalSale</nextProcessAction>
+   	</action>
+ 	<action autoInstanced="false">
+    	<name>PrepaidSale</name>
+    	<role>SalesManager</role>
+    	<nextProcessAction>PrepaidSale</nextProcessAction>
+   	</action>
+  </workflow>
+  
+  <process>
+  	<workflowName>NormalSale</workflowName>
+  	<startDate>1987-03-14T23:01:00+01:00</startDate>
+	   	<actionStatus>
+  			<name>GoodsDelivery</name>
+	   		<actor>Stefano</actor>
+	   		<endDate>1987-03-14T23:01:00+01:00</endDate>
+	   	</actionStatus>
+  </process>
+</wkf:workflows>

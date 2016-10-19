@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT workflows (workflow*, process*)>
+<!ELEMENT workflow (name,(simpleAction|processAction)+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT simpleAction (name, role, nextAction*)>
+<!ATTLIST simpleAction
+			autoInstance	(yes|no)	"no">
+<!ELEMENT role (#PCDATA)>
+<!ELEMENT nextAction (#PCDATA)>
+<!ELEMENT processAction (workflowName, role)>
+<!ATTLIST processAction
+			autoInstance	(yes|no)	"no">
+<!ELEMENT process (workflowName, startDate, actionStatus+)>
+<!ELEMENT workflowName (#PCDATA)>
+<!ELEMENT startDate (#PCDATA)>
+<!ELEMENT actionStatus (name, actor?, endDate?)>
+<!ATTLIST actionStatus
+			taken			(yes|no)	"no"
+			terminated		(yes|no)	"no">
+<!ELEMENT endDate (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>

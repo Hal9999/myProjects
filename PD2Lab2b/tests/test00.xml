@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wkf:workflows
+	xmlns:wkf="http://www.pd2.org/schemas/wfInfo"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.pd2.org/schemas/wfInfo WFInfo.xsd">
+  <workflow>
+    <name>PrepaidSale</name>
+    <action autoInstanced="true">
+      <name>InvoiceIssuance</name>
+      <role>Accountingman</role>
+      <nextAction>PaymentReception</nextAction>
+    </action>
+    <action autoInstanced="false">
+      <name>GoodsDelivery</name>
+      <role>Warehouseman</role>
+    </action>
+    <action autoInstanced="false">
+      <name>PaymentReception</name>
+      <role>Accountingman</role>
+      <nextAction>GoodsDelivery</nextAction>
+    </action>
+  </workflow>
+  <workflow>
+    <name>NormalSale</name>
+    <action autoInstanced="true">
+      <name>InvoiceIssuance</name>
+      <role>Accountingman</role>
+      <nextAction>PaymentReception</nextAction>
+    </action>
+    <action autoInstanced="false">
+      <name>PaymentReception</name>
+      <role>Accountingman</role>
+    </action>
+    <action autoInstanced="true">
+      <name>GoodsDelivery</name>
+      <role>Warehouseman</role>
+    </action>
+  </workflow>
+  <workflow>
+    <name>SaleManagement</name>
+    <action autoInstanced="true">
+      <name>AcceptOrder</name>
+      <role>Salesman</role>
+      <nextAction>PrepaidSale</nextAction>
+      <nextAction>NormalSale</nextAction>
+    </action>
+    <action autoInstanced="false">
+      <name>PrepaidSale</name>
+      <role>SalesManager</role>
+	  <nextProcessAction>PrepaidSale</nextProcessAction>
+    </action>
+    <action autoInstanced="false">
+      <name>NormalSale</name>
+      <role>SalesManager</role>
+	  <nextProcessAction>NormalSale</nextProcessAction>
+    </action>
+  </workflow>
+  <workflow>
+    <name>ArticleProduction</name>
+    <action autoInstanced="false">
+      <name>Publication</name>
+      <role>Editor</role>
+    </action>
+    <action autoInstanced="false">
+      <name>Revising</name>
+      <role>Journalist</role>
+      <nextAction>Checking</nextAction>
+    </action>
+    <action autoInstanced="false">
+      <name>Checking</name>
+      <role>Editor</role>
+      <nextAction>Revising</nextAction>
+      <nextAction>Publication</nextAction>
+    </action>
+    <action autoInstanced="true">
+      <name>Writing</name>
+      <role>Journalist</role>
+      <nextAction>Checking</nextAction>
+    </action>
+  </workflow>
+  <process>
+    <workflowName>SaleManagement</workflowName>
+    <startDate>2015-10-11T06:15:40+02:00</startDate>
+    <actionStatus>
+      <name>AcceptOrder</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>2015-10-19T10:37:40+02:00</startDate>
+    <actionStatus>
+      <name>InvoiceIssuance</name>
+      <actor>Andrew Elkan</actor>
+      <endDate>2015-10-20T12:47:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>PaymentReception</name>
+      <actor>Franca Chemin</actor>
+      <endDate>2015-10-20T20:53:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>GoodsDelivery</name>
+      <actor>Alessia Green</actor>
+      <endDate>2015-10-22T05:56:40+02:00</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>2015-11-02T12:05:40+01:00</startDate>
+    <actionStatus>
+      <name>InvoiceIssuance</name>
+      <actor>Franca Chemin</actor>
+      <endDate>2015-11-03T12:00:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>PaymentReception</name>
+      <actor>Franca Chemin</actor>
+      <endDate>2015-11-04T16:13:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>GoodsDelivery</name>
+      <actor>Paola Fireman</actor>
+      <endDate>2015-11-06T03:05:40+01:00</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>NormalSale</workflowName>
+    <startDate>2015-10-05T16:49:40+02:00</startDate>
+    <actionStatus>
+      <name>GoodsDelivery</name>
+    </actionStatus>
+    <actionStatus>
+      <name>InvoiceIssuance</name>
+      <actor>Andrew Elkan</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-10T10:48:40+02:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Beppe Minzoni</actor>
+      <endDate>2015-10-10T15:42:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>2015-10-11T20:35:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Revising</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>2015-10-12T22:22:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>2015-10-13T23:50:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Revising</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-22T09:22:40+02:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>2015-10-22T16:36:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>2015-10-24T12:54:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Revising</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>2015-10-26T10:07:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>SaleManagement</workflowName>
+    <startDate>2015-10-29T18:00:40+01:00</startDate>
+    <actionStatus>
+      <name>AcceptOrder</name>
+      <actor>Nanni Pascal</actor>
+      <endDate>2015-10-29T22:58:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>NormalSale</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>NormalSale</workflowName>
+    <startDate>2015-10-30T02:03:40+01:00</startDate>
+    <actionStatus>
+      <name>GoodsDelivery</name>
+    </actionStatus>
+    <actionStatus>
+      <name>InvoiceIssuance</name>
+      <actor>Franco Orafi</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-26T02:30:40+01:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Paolo Silvi</actor>
+      <endDate>2015-10-27T00:23:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+      <endDate>2015-10-28T23:07:40+01:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Revising</name>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-07T02:50:40+02:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>2015-10-07T20:42:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Corny Tara</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>PrepaidSale</workflowName>
+    <startDate>2015-10-17T08:40:40+02:00</startDate>
+    <actionStatus>
+      <name>InvoiceIssuance</name>
+      <actor>Franco Orafi</actor>
+      <endDate>2015-10-18T03:27:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>PaymentReception</name>
+      <actor>Franco Orafi</actor>
+      <endDate>2015-10-19T13:25:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>GoodsDelivery</name>
+      <actor>Paola Fireman</actor>
+      <endDate>2015-10-21T08:30:40+02:00</endDate>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-13T16:38:40+02:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Beppe Minzoni</actor>
+      <endDate>2015-10-15T02:47:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+      <actor>Diana Eijk</actor>
+    </actionStatus>
+  </process>
+  <process>
+    <workflowName>ArticleProduction</workflowName>
+    <startDate>2015-10-18T10:49:40+02:00</startDate>
+    <actionStatus>
+      <name>Writing</name>
+      <actor>Andrea Menegai</actor>
+      <endDate>2015-10-18T12:24:40+02:00</endDate>
+    </actionStatus>
+    <actionStatus>
+      <name>Checking</name>
+    </actionStatus>
+  </process>
+</wkf:workflows>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+TypeList>
+
+    <eventType>
+        <id>10</id>
+        <matchString>match1</matchString>
+        <niceString>nice1</niceString>
+        <classification>class1</classification>
+        <priority>1</priority>
+        <description>descr1</description>
+    </eventType>
+
+    <eventType>
+        <id>20</id>
+        <matchString>match2</matchString>
+        <niceString>nice2</niceString>
+        <classification>class2</classification>
+        <priority>2</priority>
+        <description>descr2</description>
+    </eventType>
+
+    <eventType>
+        <id>30</id>
+        <matchString>match3</matchString>
+        <niceString>nice3</niceString>
+        <classification>class3</classification>
+        <priority>3</priority>
+        <description>descr3</description>
+    </eventType>
+  
+</eventTypeList>
